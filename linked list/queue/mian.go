@@ -19,19 +19,19 @@ func (q *Queue) Dequeue() (int, error) {
 	}
 	frontElement := q.elements[0]
 	q.elements = q.elements[1:]
-	return frontElement,nil
+	return frontElement, nil
 }
 
-func (q *Queue) peek ()(int,error){
-	if q.IsEmpty(){
-		return 0,errors.New("queue is empty")
+func (q *Queue) peek() (int, error) {
+	if q.IsEmpty() {
+		return 0, errors.New("queue is empty")
 	}
-	return q.elements[0],nil
+	return q.elements[0], nil
 }
 func (q *Queue) IsEmpty() bool {
 	return len(q.elements) == 0
 }
-func (q *Queue)IsFull()bool{
+func (q *Queue) IsFull() bool {
 	return len(q.elements) != 0
 }
 func main() {
@@ -44,8 +44,8 @@ func main() {
 
 	fmt.Println("queue elements are: ")
 
-	for _,elem := range queue.elements{
-		fmt.Printf("%d \n",elem)
+	for _, elem := range queue.elements {
+		fmt.Printf("%d \n", elem)
 	}
 	fmt.Println("")
 
