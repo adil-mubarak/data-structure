@@ -44,10 +44,14 @@ func (node *TreeNode) height() int {
 func main() {
 	root := &TreeNode{value: 10}
 	root.Insert(5)
-	root.Insert(23)
-	root.Insert(3)
+	root.Insert(4)
+	root.Insert(2)
+	root.Insert(1)
 	root.Insert(7)
 	root.Insert(15)
+	root.Insert(3)
+	root.Insert(20)
+	root.Insert(23)
 
 	fmt.Println("Height of the tree:", root.height())
 }
